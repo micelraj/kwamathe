@@ -1,14 +1,8 @@
 {
-  "builds": [
-    {
-      "src": "<your_project_folder>/wsgi.py",
-      "use": "@vercel/python"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "kwamathe/wsgi.py": {
+      "maxDuration": 60
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "<your_project_folder>/wsgi.py"
-    }
-  ]
+  }
 }
